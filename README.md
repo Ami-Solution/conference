@@ -6,7 +6,7 @@ For noobs! There might be bugs here.
 
 ### Updates
 
-Current code uses *Truffle v2.0.4*
+Current code uses *Truffle v3.4.11*
 
 
 ### Install
