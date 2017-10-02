@@ -41,4 +41,7 @@ $ truffle test
 $ truffle serve // server at localhost:8080
 ```
 
-
+### Current Issues
+Running `truffle serve` currently is resulting in the error:  `TypeError: fsevents is not a constructor`
+The current workaround for this is to run `truffle init webpack` when creating creating the directory and then running
+`npm run dev` in place of `truffle serve`
