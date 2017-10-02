@@ -21,7 +21,7 @@ contract Conference {  // can be killed, so the owner gets sent the money in the
 
 	function buyTicket() payable public {
 		if (numRegistrants >= quota) { 
-			throw; // throw ensures funds will be returned
+			revert(); // throw ensures funds will be returned
 		}
 		registrantsPaid[msg.sender] = msg.value;
 		numRegistrants++;
@@ -44,7 +44,7 @@ contract Conference {  // can be killed, so the owner gets sent the money in the
 		if (registrantsPaid[recipient] == amount) { 
 			address myAddress = this;
 			if (myAddress.balance >= amount) { 
-				if (! recipient.send(amount) ) throw;
+				if (! recipient.send(amount) ) revert();
 				Refund(recipient, amount);
 				registrantsPaid[recipient] = 0;
 				numRegistrants--;
