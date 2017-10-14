@@ -6,7 +6,7 @@ For noobs! There might be bugs here.
 
 ### Updates
 
-Current code uses *Truffle v3.4.11*
+Current code uses *Truffle v3.2.1*
 
 
 ### Install
@@ -20,7 +20,7 @@ $ npm install -g ethereumjs-testrpc
 Install [truffle](https://github.com/consensys/truffle):
 
 ```
-$ npm install -g truffle 
+$ npm install -g truffle
 ```
 
 If you don't have solc you can get it [here](https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial#using-an-online-compiler)
@@ -40,8 +40,3 @@ $ truffle migrate
 $ truffle test
 $ truffle serve // server at localhost:8080
 ```
-
-### Current Issues
-Running `truffle serve` currently is resulting in the error:  `TypeError: fsevents is not a constructor`
-The current workaround for this is to run `truffle init webpack` when creating creating the directory and then running
-`npm run dev` in place of `truffle serve`
